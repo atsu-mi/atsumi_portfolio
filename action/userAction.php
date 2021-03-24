@@ -13,5 +13,9 @@
       $user->login($_POST['email'], $_POST['password']);
     }
 
+    if(isset($_POST['book'])){
+      $user->book($_POST['phone_number'], $_POST{'date'}, $_POST{'time'}, $_POST{'people'});
+    }
+
 
 ?>    

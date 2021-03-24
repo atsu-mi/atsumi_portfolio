@@ -27,20 +27,29 @@ class User extends Database{
   }
 
   public function login($email, $password){
-      $sql = "SELECT * FROM accounts INNER JOIN users ON users.account_id = accounts_id WHERE email = '$email'";
+      $sql = "SELECT * FROM accounts INNER JOIN users ON users.account_id = accounts.account_id WHERE email = '$email'";
 
       $result = $this->conn->query($sql);
 
       if($result->num_rows == 1){
           $row = $result->fetch_assoc();
 
-          if(password_verify($$password, $row['password'])){
+          if(password_verify($password, $row['password'])){
               $_SESSION['email'] = $row['email'];
+              $_SESSION['user_id'] = $row['user_id'];
               $_SESSION['first_name'] = $row['first_name'];
-              $_SESSION['lastname'] = $row['last_name'];
+              $_SESSION['last_name'] = $row['last_name'];
               $_SESSION['status'] = $row['account_status'];
+
+              header("Location: ../index.php");
           }
       }
+  }
+
+  public function book($phone_number, $date, $time, $number_of_people){
+    $sql = "INSERT INTO book(phone_number, date, time, number_of_people) VALUES ('$phone_number', '$date', '$time', '$number_of_people')";
+
+
   }
 
 
