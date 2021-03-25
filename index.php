@@ -60,7 +60,7 @@
   </div>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-cente">
+  <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
       <h1 class="logo me-auto me-lg-0"><a href="index.html">My coffee</a></h1>
@@ -139,54 +139,21 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Why Us Section ======= -->
-    <!-- <section id="why-us" class="why-us">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Why Us</h2>
-          <p>Why Choose Our Restaurant</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4">
-            <div class="box" data-aos="zoom-in" data-aos-delay="100">
-              <span>01</span>
-              <h4>Lorem Ipsum</h4>
-              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="200">
-              <span>02</span>
-              <h4>Repellat Nihil</h4>
-              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="300">
-              <span>03</span>
-              <h4> Ad ad velit qui</h4>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>End Why Us Section -->
+    
 
     <!-- ======= Menu Section ======= -->
     <section id="menu" class="menu section-bg">
       <div class="container" data-aos="fade-up">
+       <div class="row">
+         <div class="section-title col-6">
+           <h2>Menu</h2>
+           <p>Check Our Tasty Menu</p>
+         </div>
+         <div class="section-title col-6"> <br>
+           <p><a href="views/login.php"></a> order here</p>
+         </div>
 
-        <div class="section-title">
-          <h2>Menu</h2>
-          <p>Check Our Tasty Menu</p>
-        </div>
+       </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
@@ -195,6 +162,7 @@
               <li data-filter=".filter-starters">Starters</li>
               <li data-filter=".filter-salads">Salads</li>
               <li data-filter=".filter-specialty">Coffee</li>
+              <li data-filter=".filter-delivery">Delivery</a></li>
             </ul>
           </div>
         </div>
@@ -211,7 +179,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-starters">
+          <div class="col-lg-6 menu-item filter-starters filter-delivery">
             <img src="assets/img/menu/bread-barrel.jpg" class="menu-img" alt="">
             <div class="menu-content">
               <a href="#">Bread Barrel</a><span>$6.95</span>
@@ -241,7 +209,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-starters">
+          <div class="col-lg-6 menu-item filter-starters filter-delivery">
             <img src="assets/img/menu/tuscan-grilled.jpg" class="menu-img" alt="">
             <div class="menu-content">
               <a href="#">Tuscan Grilled</a><span>$9.95</span>
@@ -261,7 +229,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-salads">
+          <div class="col-lg-6 menu-item filter-salads filter-delivery">
             <img src="assets/img/menu/greek-salad.jpg" class="menu-img" alt="">
             <div class="menu-content">
               <a href="#">Greek Salad</a><span>$9.95</span>
@@ -271,7 +239,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-salads">
+          <div class="col-lg-6 menu-item filter-salads filter-delivery">
             <img src="assets/img/menu/spinach-salad.jpg" class="menu-img" alt="">
             <div class="menu-content">
               <a href="#">Spinach Salad</a><span>$9.95</span>
@@ -281,7 +249,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-starters">
+          <div class="col-lg-6 menu-item filter-starters filter-delivery">
             <img src="assets/img/menu/lobster-roll.jpg" class="menu-img" alt="">
             <div class="menu-content">
               <a href="#">Lobster Roll</a><span>$12.95</span>
@@ -301,7 +269,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-specialty">
+          <div class="col-lg-6 menu-item filter-specialty filter-delivery">
             <img src="assets/img/menu/ice-coffee.jpg" class="menu-img" alt="">
             <div class="menu-content">
               <a href="#">Ice Coffee</a><span>$3.0</span>
@@ -331,14 +299,14 @@
           <p>Book a Table</p>
         </div>
 
-        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+        <form action="action/userAction.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
           <div class="row">
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <input type="text" name="name" value="<?php echo $_SESSION['first_name']." ".$_SESSION['last_name']?>" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+              <input type="email" class="form-control" name="email" value="<?php echo $_SESSION['email'] ?>" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
@@ -514,7 +482,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="action/userAction.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -628,7 +596,7 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->

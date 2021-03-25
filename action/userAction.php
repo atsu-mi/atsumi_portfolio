@@ -11,10 +11,10 @@
        }
     }elseif(isset($_POST['login'])){
       $user->login($_POST['email'], $_POST['password']);
-    }
-
-    if(isset($_POST['book'])){
-      $user->book($_POST['phone_number'], $_POST{'date'}, $_POST{'time'}, $_POST{'people'});
+    }elseif(isset($_POST['book'])){
+      $user->book($_SESSION['user_id'], $_SESSION['email'], $_POST['phone_number'], $_POST['date'], $_POST['time'], $_POST['people']);
+    }elseif(isset($_POST['message'])){
+      $user->contact($_POST['name'], $_POST['email'], $_POST['subject'], $_POST['message']);
     }
 
 

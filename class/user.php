@@ -46,9 +46,26 @@ class User extends Database{
       }
   }
 
-  public function book($phone_number, $date, $time, $number_of_people){
-    $sql = "INSERT INTO book(phone_number, date, time, number_of_people) VALUES ('$phone_number', '$date', '$time', '$number_of_people')";
+  public function book($user_id, $email, $phone_number, $date, $time, $number_of_people){
+    $sql = "INSERT INTO book(user_id, email, phone_number, date, time, number_of_people) VALUES ('$user_id','$email','$phone_number', '$date', '$time', '$number_of_people')";
+    $result = $this->conn->query($sql);
 
+    if($result == TRUE){
+      echo "<div>Reservation completed</div>";
+    }else{
+      die('ERROR'.$this->conn->error);
+    }
+  }
+
+  public function contact($full_name, $email, $subject, $message){
+    $sql = "INSERT INTO contact(full_name, email, subject, message) VALUES ('$full_name', '$email', '$subject', '$message')";
+    $result = $this->conn->query($sql);
+
+    if($result == TRUE){
+      header("Location: ../index.php");
+    }else{
+      die('ERROR'.$this->conn->error);
+    }
 
   }
 
