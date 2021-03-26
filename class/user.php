@@ -42,6 +42,8 @@ class User extends Database{
               $_SESSION['status'] = $row['account_status'];
 
               header("Location: ../index.php");
+          }else{
+            die('The password or email address is incorrect'.$this->conn->error);
           }
       }
   }

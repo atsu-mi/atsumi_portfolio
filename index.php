@@ -63,7 +63,7 @@
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">My coffee</a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="#">My coffee</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -72,11 +72,14 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
-    
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li> 
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
           
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a href="views/login.php">Delivery</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -144,16 +147,11 @@
     <!-- ======= Menu Section ======= -->
     <section id="menu" class="menu section-bg">
       <div class="container" data-aos="fade-up">
-       <div class="row">
          <div class="section-title col-6">
            <h2>Menu</h2>
            <p>Check Our Tasty Menu</p>
          </div>
-         <div class="section-title col-6"> <br>
-           <p><a href="views/login.php"></a> order here</p>
-         </div>
-
-       </div>
+        
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
@@ -162,7 +160,6 @@
               <li data-filter=".filter-starters">Starters</li>
               <li data-filter=".filter-salads">Salads</li>
               <li data-filter=".filter-specialty">Coffee</li>
-              <li data-filter=".filter-delivery">Delivery</a></li>
             </ul>
           </div>
         </div>
@@ -179,7 +176,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-starters filter-delivery">
+          <div class="col-lg-6 menu-item filter-starters">
             <img src="assets/img/menu/bread-barrel.jpg" class="menu-img" alt="">
             <div class="menu-content">
               <a href="#">Bread Barrel</a><span>$6.95</span>
@@ -209,7 +206,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-starters filter-delivery">
+          <div class="col-lg-6 menu-item filter-starters">
             <img src="assets/img/menu/tuscan-grilled.jpg" class="menu-img" alt="">
             <div class="menu-content">
               <a href="#">Tuscan Grilled</a><span>$9.95</span>
@@ -229,7 +226,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-salads filter-delivery">
+          <div class="col-lg-6 menu-item filter-salads">
             <img src="assets/img/menu/greek-salad.jpg" class="menu-img" alt="">
             <div class="menu-content">
               <a href="#">Greek Salad</a><span>$9.95</span>
@@ -239,7 +236,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-salads filter-delivery">
+          <div class="col-lg-6 menu-item filter-salads">
             <img src="assets/img/menu/spinach-salad.jpg" class="menu-img" alt="">
             <div class="menu-content">
               <a href="#">Spinach Salad</a><span>$9.95</span>
@@ -249,7 +246,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-starters filter-delivery">
+          <div class="col-lg-6 menu-item filter-starters">
             <img src="assets/img/menu/lobster-roll.jpg" class="menu-img" alt="">
             <div class="menu-content">
               <a href="#">Lobster Roll</a><span>$12.95</span>
@@ -269,7 +266,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 menu-item filter-specialty filter-delivery">
+          <div class="col-lg-6 menu-item filter-specialty">
             <img src="assets/img/menu/ice-coffee.jpg" class="menu-img" alt="">
             <div class="menu-content">
               <a href="#">Ice Coffee</a><span>$3.0</span>
